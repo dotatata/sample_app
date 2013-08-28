@@ -1,0 +1,122 @@
+@import "bootstrap";
+
+/*sass句法自定义css的变量 LESS采用@符号开头*/
+$grayMediumLight: #eaeaea;
+
+/* universal */
+html {
+  overflow-y: scroll;
+}
+body {
+  /*容器内部的上边距*/
+  padding-top: 60px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+  /*sass会预编scss后缀中此类sass的句法*/
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+/*采用sass提供的嵌套样式取代*/
+/*.center h1 {
+  组件与相邻组件的边距
+  margin-bottom: 10px;
+}*/
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  /*bootstrap-sass gem中已经定义了此sass变量 具体的可以上网页查看bootstrap的LESS列表*/
+  color: $grayLight;
+  /*color: $lightGray;*/
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/*header*/
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+/*hover伪类表示鼠标悬停的css样式 采用sass的嵌套取代*/
+/*#logo:hover{
+  color: #fff;
+  text-decoration: none;
+}*/
+
+/*footer*/
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+/*用sass的嵌套取代*/
+/*footer a {
+  color: #555;
+}
+footer a:hover {
+  color: #222;
+}
+footer small {
+  float: left;
+}
+footer ul {
+  float: right;
+  list-style: none;
+}
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}*/
